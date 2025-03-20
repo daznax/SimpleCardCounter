@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Counter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        button {
+            padding: 10px 20px;
+        }
+        #quit {
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            background-color: #e00ffc; /* Red */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p class="deckInput">
+            <h2>This will display your running count and true count! Enter the number of decks below to get started</h2>
+            <label for="decks">Number of Decks (1-12):</label>
+            <input type="number" id="decks" name="decks" min="1" max="12">
+            <button id="saveDecks" onclick="saveDecks()">Save Deck Count</button>
+        </p>
+
+        <h2>Use the buttons below to indicate which cards have come up!</h2>
+            <button id="plusCard" onclick="updateCounts('0')">Low Card (2-6)</button>
+            <button id="midCard" onclick="updateCounts('1')">Middle Card (7-9)</button>
+            <button id="minusCard" onclick="updateCounts('2')">Face Card (including Ace)</button>
+
+        <h1 id="runCount">Running Count: </h1>
+        <h1 id="trueCount">True Count: </h1>
+
+        <p><a href="MainPage.html"><button id="quit" onclick="exitApp('playerExit')">Exit!</button></a></p>
+        
+    </div>
+    <!--Scripts for this page below-->
+    <script src="CardCounterJavaFunctions.js"></script>
+</body>
+
+
+</html>

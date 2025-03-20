@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Counter</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 100px;
+            margin: 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+        #newsession {
+            background-color: #22e2e9; /* Green */
+        }
+        #newsession:hover {
+            background-color: #0110df; /* Darker green */
+        }
+        #quit {
+            background-color: #e00ffc; /* Red */
+        }
+        #quit:hover {
+            background-color: #d40000; /* Darker red */
+        }
+        #welcome {
+            padding: 20px 10px;
+            font-size: 25px;
+            margin: auto;
+            border: 1;
+            border-radius: 5px;
+            color: rgb(240, 101, 8);
+            background-color: #000000; /* Darker red */
+            
+        }
+    </style>
+    <script src="CardCounterJavaFunctions.js"></script>
+</head>
+<body>
+    <div>
+        <h1 id="pageWelcome">
+            <button id="welcome">Welcome to the Card Counting Assistant! Click below to start a new session.</button>
+        </h1>
+        <h2 id="actionButtons">
+            <a href="NewSession.html"><button id="newsession">New Session</button></a>
+            <button id="quit" >Exit!</button>
+        </h2>
+    </div>
+</body>
+</html>
